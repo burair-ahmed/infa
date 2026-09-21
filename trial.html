@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azon Pharmaceuticals &amp; Nutritions (Pvt.) Ltd.</title>
+    <style>
+        :root {
+            --navy: #0d2f52;
+            --blue: #1b6fc9;
+            --blue-dark: #0f4c8c;
+            --green: #8dc63f;
+            --light-blue: #bfe3f5;
+            --text-grey: #5b6472;
+            --footer-navy: #0a2f57;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 10;
+            background: #fff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg {
+            width: 38px;
+            height: 38px;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-text .name {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            letter-spacing: 1px;
+        }
+
+        .logo-text .name span {
+            color: var(--green);
+        }
+
+        .logo-text .sub {
+            font-size: 8px;
+            letter-spacing: 1px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        nav ul li a {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        nav ul li a.active {
+            color: var(--blue);
+        }
+
+        nav ul li a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: var(--blue);
+        }
+
+        nav ul li a:hover {
+            color: var(--blue);
+        }
+
+        .caret {
+            font-size: 10px;
+            margin-left: 4px;
+        }
+
+        .btn-primary {
+            background: var(--blue-dark);
+            color: #fff;
+            padding: 12px 26px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 640px;
+            background:
+                linear-gradient(120deg, rgba(9, 38, 68, 0.85) 0%, rgba(15, 60, 110, 0.55) 55%, rgba(9, 38, 68, 0.75) 100%),
+                radial-gradient(circle at 70% 30%, #1c4d7a, #0a2440 70%);
+            display: flex;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 30% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+                radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content .eyebrow {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+
+        .hero-content h1 {
+            font-size: 44px;
+            font-style: italic;
+            font-weight: 700;
+            max-width: 600px;
+            line-height: 1.25;
+        }
+
+        .hero-rule {
+            width: 120px;
+            height: 3px;
+            background: var(--green);
+            margin: 26px 0 40px;
+        }
+
+        .hero-contact {
+            position: absolute;
+            bottom: 34px;
+            left: 40px;
+            display: flex;
+            gap: 34px;
+            font-size: 14px;
+            color: #eaf2fb;
+        }
+
+        .hero-contact div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* EMPOWERING SECTION */
+        .empower {
+            display: grid;
+            grid-template-columns: 1fr 3px 1.15fr;
+            gap: 40px;
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .empower h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            line-height: 1.25;
+        }
+
+        .empower-divider {
+            background: var(--green);
+            width: 3px;
+            height: 100%;
+        }
+
+        .empower p {
+            color: var(--text-grey);
+            margin-bottom: 18px;
+            font-size: 15.5px;
+        }
+
+        .empower p strong {
+            color: #333;
+        }
+
+        /* SECTION HEADS */
+        .section-head {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-head h2 {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .section-head .rule {
+            width: 70px;
+            height: 3px;
+            background: var(--green);
+            margin: 0 auto;
+        }
+
+        /* PRODUCTS */
+        .products {
+            padding: 40px 40px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 46px;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .can-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: -10px;
+            margin-bottom: 26px;
+            height: 190px;
+        }
+
+        .product-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .can {
+            width: 64px;
+            height: 150px;
+            border-radius: 8px 8px 14px 14px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 11px;
+            margin: 0 -8px;
+            position: relative;
+        }
+
+        .can .lid {
+            position: absolute;
+            top: -8px;
+            left: -4px;
+            right: -4px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .can.c1 {
+            background: linear-gradient(180deg, #eef1f5, #dfe4ea);
+            color: var(--blue-dark);
+            height: 130px;
+            align-self: flex-end;
+        }
+
+        .can.c2 {
+            background: linear-gradient(180deg, #1b6fc9, #0f4c8c);
+            height: 160px;
+            align-self: flex-end;
+        }
+
+        .can.c3 {
+            background: linear-gradient(180deg, #6a3fa0, #4a2a75);
+            height: 150px;
+            align-self: flex-end;
+        }
+
+        .can.c4 {
+            background: linear-gradient(180deg, #c98a3a, #a5641c);
+            height: 140px;
+            align-self: flex-end;
+        }
+
+        .box {
+            width: 58px;
+            height: 150px;
+            border-radius: 4px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .box.b1 {
+            background: linear-gradient(160deg, #2ab7a9, #1b8577);
+            height: 140px;
+            align-self: flex-end;
+        }
+
+        .box.b2 {
+            background: linear-gradient(160deg, #7a4fc7, #5732a0);
+            height: 150px;
+            align-self: flex-end;
+        }
+
+        .box.b3 {
+            background: linear-gradient(160deg, #1b6fc9, #0f4c8c);
+            height: 145px;
+            align-self: flex-end;
+        }
+
+        .box.b4 {
+            background: linear-gradient(160deg, #8dc63f, #5f9a1e);
+            height: 135px;
+            align-self: flex-end;
+        }
+
+        .tub {
+            width: 66px;
+            height: 120px;
+            border-radius: 50% 50% 10px 10px / 20% 20% 10px 10px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .tub.t1 {
+            background: linear-gradient(160deg, #1b6fc9, #0d3f6e);
+            height: 120px;
+            align-self: flex-end;
+        }
+
+        .tub.t2 {
+            background: linear-gradient(160deg, #c98a3a, #8f5c16);
+            height: 110px;
+            align-self: flex-end;
+        }
+
+        .tub.t3 {
+            background: linear-gradient(160deg, #4a2a75, #2c1848);
+            height: 112px;
+            align-self: flex-end;
+        }
+
+        /* GUIDELINES */
+        .guidelines {
+            background: #fbfcfe;
+            padding: 90px 0;
+        }
+
+        .guidelines-intro {
+            max-width: 1200px;
+            margin: 0 auto 56px;
+            padding: 0 40px;
+            color: var(--text-grey);
+            font-size: 15.5px;
+        }
+
+        .guidelines-body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 0.85fr 1.3fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .baby-illustration {
+            width: 100%;
+            aspect-ratio: 1/1.1;
+            border-radius: 16px;
+            background: radial-gradient(circle at 50% 30%, #ffe9c7, #ffd48a 60%, #f5b94f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .baby-illustration svg {
+            width: 78%;
+            height: 78%;
+        }
+
+        .faq {
+            border-top: 1px solid #e4e8ee;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e4e8ee;
+        }
+
+        .faq-q {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #222;
+            cursor: pointer;
+        }
+
+        .faq-q .arrow {
+            transition: transform 0.25s ease;
+            font-size: 12px;
+            color: #333;
+            flex: 0 0 auto;
+            margin-left: 16px;
+        }
+
+        .faq-item.open .faq-q .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 14.5px;
+            color: var(--text-grey);
+        }
+
+        .faq-a p {
+            padding: 0 4px 20px;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 200px;
+        }
+
+        /* BLOGS */
+        .blogs {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+        }
+
+        .blog-card {
+            border: 2.5px dotted var(--green);
+            border-radius: 18px;
+            min-height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px 26px;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .blog-card p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: var(--light-blue);
+            padding: 70px 40px 0;
+        }
+
+        .contact-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contact-info .logo {
+            margin-bottom: 20px;
+        }
+
+        .contact-info .logo-text .name {
+            color: var(--blue-dark);
+        }
+
+        .contact-info p {
+            font-size: 14.5px;
+            color: #1c3a52;
+            margin-bottom: 16px;
+            max-width: 230px;
+        }
+
+        .contact-info .line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14.5px;
+            color: #1c3a52;
+            margin-bottom: 10px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .socials a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #0d2f52;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            color: var(--blue-dark);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px 16px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 14px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 110px;
+        }
+
+        .contact-form button {
+            background: var(--blue-dark);
+            color: #fff;
+            border: none;
+            padding: 13px 40px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        .contact-hand {
+            height: 100%;
+            min-height: 260px;
+            border-radius: 16px 16px 0 0;
+            background: linear-gradient(160deg, #f6dfc4, #e9c9a0);
+        }
+
+        /* FOOTER NOTICE */
+        .notice {
+            background: var(--footer-navy);
+            color: #dfe8f2;
+            padding: 18px 40px;
+            font-size: 12.5px;
+        }
+
+        .notice .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .notice strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .notice a {
+            text-decoration: underline;
+            color: #dfe8f2;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        .copyright {
+            background: #0a2647;
+            color: #c7d4e2;
+            text-align: center;
+            padding: 16px;
+            font-size: 13px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            width: 42px;
+            height: 42px;
+            background: var(--blue-dark);
+            color: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width:900px) {
+            nav ul {
+                display: none;
+            }
+
+            .empower {
+                grid-template-columns: 1fr;
+            }
+
+            .empower-divider {
+                display: none;
+            }
+
+            .guidelines-body {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-contact {
+                position: static;
+                margin-top: 30px;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <svg viewBox="0 0 60 60" fill="none">
+                <path d="M30 6 L54 50 L38 50 L30 34 L22 50 L6 50 Z" fill="#1b6fc9" />
+                <path d="M30 6 L42 28 L30 28 Z" fill="#8dc63f" />
+            </svg>
+            <div class="logo-text">
+                <div class="name">AZON</div>
+                <div class="sub">PHARMACEUTICALS &amp; NUTRITIONS (PVT.) LTD.</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products <span class="caret">▾</span></a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blogs">Blogs <span class="caret">▾</span></a></li>
+            </ul>
+            <button class="btn-primary">Email Login</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="eyebrow">A Wholesome Beginning with</div>
+            <h1>Azolac Infant Formula</h1>
+            <div class="hero-rule"></div>
+        </div>
+        <div class="hero-contact">
+            <div>📞 +92 213 4372121-2</div>
+            <div>✉️ info@azon-pn.com</div>
+        </div>
+    </section>
+
+    <section class="empower">
+        <h2>Empowering Healthier Lives Through Innovation in Nutrition</h2>
+        <div class="empower-divider"></div>
+        <div>
+            <p>At <strong>Azon Pharmaceuticals &amp; Nutritions Pvt. Ltd.</strong>, we are redefining the future of
+                nutritional wellness. Since 2018, our mission has been to inspire healthier living through
+                science-backed innovations and premium nutritional products.</p>
+            <p>Through our trusted brands — <strong>Azolac</strong> and <strong>Omilac</strong> — we deliver quality
+                solutions that help individuals <strong>live better, feel better, and eat better</strong> every day.</p>
+            <p>Rooted in purpose and driven by progress, we are committed to shaping a healthier, more sustainable world
+                — one innovation at a time.</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="section-head">
+            <h2>Our Products</h2>
+            <div class="rule"></div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="can-row">
+                    <div class="can c1">
+                        <div class="lid"></div>LF
+                    </div>
+                    <div class="can c2">
+                        <div class="lid"></div>1
+                    </div>
+                    <div class="can c3">
+                        <div class="lid"></div>2
+                    </div>
+                    <div class="can c4">
+                        <div class="lid"></div>3
+                    </div>
+                </div>
+                <h3>AZOLAC RANGE</h3>
+            </div>
+            <div class="product-card">
+                <div class="can-row">
+                    <div class="box b1">mama</div>
+                    <div class="box b2">LF</div>
+                    <div class="box b3">1</div>
+                    <div class="box b4">Grow</div>
+                </div>
+                <h3>OMILAC RANGE</h3>
+            </div>
+            <div class="product-card">
+                <div class="can-row">
+                    <div class="tub t1">Rice</div>
+                    <div class="tub t2">Wheat</div>
+                    <div class="tub t3">Milk</div>
+                </div>
+                <h3>OMILAC CEREAL</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="guidelines">
+        <div class="section-head">
+            <h2>Global Nutritional Guidelines</h2>
+            <div class="rule"></div>
+        </div>
+        <p class="guidelines-intro">Good nutrition from birth to 3 years is essential for healthy growth, brain
+            development, and lifelong wellness. Early childhood is the most critical stage to establish healthy eating
+            habits for infants and toddlers. These guidelines provide trusted information on infant and toddler
+            nutrition — including recommended foods, drinks, and feeding practices for children from newborn to 36
+            months. Parents and caregivers can explore these resources to learn how to support healthy growth and
+            development in early childhood.</p>
+        <div class="guidelines-body">
+            <div class="baby-illustration">
+                <svg viewBox="0 0 200 200">
+                    <circle cx="100" cy="70" r="38" fill="#ffd7b0" />
+                    <rect x="60" y="100" width="80" height="70" rx="26" fill="#fff" />
+                    <circle cx="88" cy="66" r="4" fill="#3a2a20" />
+                    <circle cx="112" cy="66" r="4" fill="#3a2a20" />
+                    <path d="M85 82 Q100 92 115 82" stroke="#3a2a20" stroke-width="3" fill="none"
+                        stroke-linecap="round" />
+                    <path d="M60 40 Q100 15 140 40 Q140 60 100 60 Q60 60 60 40Z" fill="#8a5a2b" />
+                </svg>
+            </div>
+            <div class="faq">
+                <div class="faq-item open">
+                    <button class="faq-q">Why is nutrition important for young children? <span
+                            class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Good nutrition in early childhood supports healthy growth, brain development, and a strong
+                            immune system that lasts a lifetime.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is protein important in early childhood? <span
+                            class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Protein builds and repairs tissue and supports the rapid muscle and organ growth that happens
+                            in the first years of life.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why does my child need vitamin D, and can he/she get enough from
+                        sunlight?<span class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Vitamin D helps the body absorb calcium for strong bones. Sunlight alone is often not enough,
+                            so a supplement may be recommended.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When can I introduce solid foods to my baby? <span
+                            class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Most guidelines recommend introducing solid foods around 6 months, alongside continued
+                            breastfeeding or formula.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is iron important for infants and toddlers? <span
+                            class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Iron supports healthy brain development and helps prevent anemia during a period of rapid
+                            growth.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is calcium important for babies and toddlers? <span
+                            class="arrow">▾</span></button>
+                    <div class="faq-a">
+                        <p>Calcium builds strong bones and teeth and supports muscle and nerve function as your child
+                            grows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blogs" id="blogs">
+        <div class="section-head">
+            <h2>Blogs</h2>
+            <div class="rule"></div>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <p>DHA &amp; ARA Study Balance in Developmental Outcomes</p>
+            </div>
+            <div class="blog-card">
+                <p>Role of Protein in Infant Formula</p>
+            </div>
+            <div class="blog-card">
+                <p>Protein Recommendations and Low Protein Formula Benefits</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="logo">
+                    <svg viewBox="0 0 60 60" fill="none" width="34">
+                        <path d="M30 6 L54 50 L38 50 L30 34 L22 50 L6 50 Z" fill="#1b6fc9" />
+                        <path d="M30 6 L42 28 L30 28 Z" fill="#8dc63f" />
+                    </svg>
+                    <div class="logo-text">
+                        <div class="name" style="font-size:20px;">AZON</div>
+                        <div class="sub">PHARMACEUTICALS &amp; NUTRITIONS (PVT.) LTD.</div>
+                    </div>
+                </div>
+                <p>Banglow # 41-J/1, Block-06, Rafi Shamsi Road, P.E.C.H.S, Karachi, Pakistan</p>
+                <div class="line">📞 +92 213 4372121-2</div>
+                <div class="line">✉️ info@azon-pn.com</div>
+                <div class="socials">
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form onsubmit="event.preventDefault(); alert('Thanks! We will get back to you soon.');">
+                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="Mobile Number" required>
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-hand"></div>
+        </div>
+    </section>
+
+    <div class="notice">
+        <div class="container">
+            <div><strong>Important Notice:</strong><br>
+                Mother milk is best for babies. The WHO recommends mothers worldwide to exclusively breastfeed infants
+                for the child's first six months to achieve optimal growth, development and health. Thereafter, they
+                should be given nutritious complementary foods and continue breastfeeding up to the age of two years or
+                beyond.</div>
+            <a href="#">Click here for reference</a>
+        </div>
+    </div>
+    <div class="copyright">© 2025 Azon Pharmaceuticals &amp; Nutritions (Pvt) Ltd.</div>
+
+    <div class="scroll-top">⌃</div>
+
+    <script>
+        document.querySelectorAll('.faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
