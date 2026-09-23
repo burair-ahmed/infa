@@ -16,7 +16,7 @@
                 <img src="3_20260909_190954_0002.png" alt="Infa Brands Logo">
             </a>
         </div>
-        <nav>
+        <nav id="navMenu">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -29,22 +29,30 @@
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-action-item">
+                    <a href="contact.html" class="btn-primary" style="text-decoration:none;">Contact Us</a>
+                </li>
             </ul>
         </nav>
         <div class="header-action">
             <a href="contact.html" class="btn-primary" style="text-decoration:none;display:inline-block;">Contact Us</a>
         </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <section class="hero">
+        <video class="hero-bg-video" autoplay loop muted playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="eyebrow">A Wholesome Beginning with</div>
             <h1>Infa Brands Infant Formula</h1>
             <div class="hero-rule"></div>
-        </div>
-        <div class="hero-contact">
-            <div><a href="tel:+923118304563" style="color:inherit;">📞 +92 311 83 04 563</a></div>
-            <div><a href="mailto:infabrandsmarketing@gmail.com" style="color:inherit;">✉️ infabrandsmarketing@gmail.com</a></div>
         </div>
     </section>
 
@@ -73,7 +81,7 @@
                     <div class="product-img-wrap">
                         <img src="2026-09-09-17-14-46-775.jpg.jpeg" alt="Vinlac Range" class="product-img">
                     </div>
-                    <h3>Vinlac</h3>
+                    <h3>Vinlac Range</h3>
                 </div>
             </a>
             <a href="omil-range.html" style="text-decoration:none;color:inherit;display:contents;">
@@ -81,15 +89,15 @@
                     <div class="product-img-wrap">
                         <img src="2026-09-09-17-26-59-496.jpg.jpeg" alt="Omil Range" class="product-img">
                     </div>
-                    <h3>Omil</h3>
+                    <h3>Omil Range</h3>
                 </div>
             </a>
             <a href="omil-cereal-range.html" style="text-decoration:none;color:inherit;display:contents;">
                 <div class="product-card" style="cursor:pointer;">
                     <div class="product-img-wrap">
-                        <img src="2026-09-09-18-25-35-565.jpg.jpeg" alt="Omil Cereal" class="product-img">
+                        <img src="omil-cereal.jpeg" alt="Omil Cereal Range" class="product-img">
                     </div>
-                    <h3>Omil</h3>
+                    <h3>Omil Cereal Range</h3>
                 </div>
             </a>
         </div>
@@ -236,20 +244,7 @@
 
     <div class="scroll-top">⌃</div>
 
-    <script>
-        document.querySelectorAll('.faq-q').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.parentElement;
-                const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-                if (!wasOpen) item.classList.add('open');
-            });
-        });
-        document.querySelector('.scroll-top').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

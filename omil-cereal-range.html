@@ -17,7 +17,7 @@
                 <img src="3_20260909_190954_0002.png" alt="Infa Brands Logo">
             </a>
         </div>
-        <nav>
+        <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -30,11 +30,19 @@
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-action-item">
+                    <a href="contact.html" class="btn-primary" style="text-decoration:none;">Contact Us</a>
+                </li>
             </ul>
         </nav>
         <div class="header-action">
             <a href="contact.html" class="btn-primary" style="text-decoration:none;display:inline-block;">Contact Us</a>
         </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <!-- BANNER -->
@@ -155,12 +163,7 @@
 
     <div class="scroll-top">⌃</div>
 
-    <script>
-        document.querySelector('.scroll-top').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
