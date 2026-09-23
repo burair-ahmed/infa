@@ -602,7 +602,7 @@ nav ul li a:hover {
 /* CONTACT (BOTTOM SECTION) */
 .contact {
     background: var(--light-blue);
-    padding: 70px 40px 0;
+    padding: 70px 40px 50px;
 }
 
 .contact-grid {
@@ -702,7 +702,7 @@ nav ul li a:hover {
     font-weight: 600;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     font-size: 14px;
     transition: background 0.2s ease;
 }
@@ -1397,7 +1397,7 @@ nav ul li a:hover {
     }
 
     .contact {
-        padding: 50px 20px 0;
+        padding: 50px 20px 45px;
     }
 
     .contact-grid {
