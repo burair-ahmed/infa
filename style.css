@@ -137,6 +137,68 @@ nav ul li a:hover {
     margin-left: 4px;
 }
 
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(9, 38, 68, 0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    list-style: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 100;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    display: block !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.dropdown-menu li a:hover {
+    background: #f0f7fd;
+    color: var(--blue);
+}
+
+.dropdown-menu li a.active {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.dropdown-menu li a::after {
+    display: none !important;
+}
+
 .header-action {
     flex: 1 1 0;
     display: flex;
@@ -876,6 +938,15 @@ nav ul li a:hover {
     letter-spacing: 0.5px;
 }
 
+.about-header-banner .banner-sub {
+    font-size: 14.5px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+}
+
 .about-story-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -997,3 +1068,126 @@ nav ul li a:hover {
     object-fit: cover;
     display: block;
 }
+
+/* OMIL RANGE PAGE STYLES */
+.omil-range-intro {
+    max-width: 1100px;
+    margin: 50px auto 70px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.omil-range-intro strong {
+    color: var(--blue-dark);
+}
+
+.omil-range-section {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 40px;
+}
+
+.omil-product-row {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.omil-product-row.reverse {
+    grid-template-columns: 1.35fr 1fr;
+}
+
+.omil-img-box {
+    background: #f4f7fb;
+    border-radius: 32px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 440px;
+    box-shadow: 0 10px 30px rgba(9, 38, 68, 0.04);
+    border: 1px solid rgba(18, 78, 140, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.omil-img-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(9, 38, 68, 0.08);
+}
+
+.omil-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+    transition: transform 0.35s ease;
+}
+
+.omil-img-box:hover img {
+    transform: scale(1.04);
+}
+
+.omil-info-box h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #124e8c;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.omil-info-box h3 {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+.omil-info-box p {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.omil-info-box ul {
+    list-style: disc;
+    padding-left: 22px;
+    color: #4a5568;
+    margin: 0;
+}
+
+.omil-info-box ul li {
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 11px;
+}
+
+@media (max-width: 900px) {
+    .omil-product-row,
+    .omil-product-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 60px;
+    }
+
+    .omil-product-row.reverse .omil-img-box {
+        order: -1;
+    }
+
+    .omil-img-box {
+        height: 320px;
+        padding: 24px;
+    }
+
+    .omil-range-section {
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+}
+
